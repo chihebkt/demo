@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #646cff;
+  --hover-color: #535bf2;
+  --background: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --error-color: #ff4444;
+  --success-color: #4caf50;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.App-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  color: #333;
+}
+
+.App-header h1 {
+  margin: 0 0 2rem 0;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loading {
+  padding: 2rem;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: var(--error-color);
+  padding: 1rem;
+  background-color: #ffe6e6;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.message-container {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.message h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  color: #667eea;
+}
+
+.timestamp {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.label {
+  font-weight: 600;
+  color: #333;
+}
+
+.refresh-button,
+.retry-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 1rem;
+}
+
+.refresh-button:hover,
+.retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.refresh-button:active,
+.retry-button:active {
+  transform: translateY(0);
+}
+
+.info {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  color: #666;
+}
+
+.info p {
+  margin: 0.5rem 0;
+}
+
+.small {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 2rem 1rem;
+  }
+
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .message h2 {
+    font-size: 1.5rem;
+  }
+}

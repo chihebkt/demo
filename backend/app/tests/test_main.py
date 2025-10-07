@@ -10,13 +10,8 @@ Test coverage includes:
 import pytest
 from fastapi.testclient import TestClient
 from datetime import datetime
-import sys
-from pathlib import Path
 
-# Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from main import app
+from app.main import app
 
 client = TestClient(app)
 
